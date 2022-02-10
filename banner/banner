@@ -1,3 +1,2 @@
-clear
-printf "\033[1;31m" && cat /usr/local/bin/s1.txt && printf "\033[0m" && cat /usr/local/bin/s2.txt && printf "\033[1;32m" && cat /usr/local/bin/s3.txt
-echo
+#!/bin/bash
+clear && printf "\033[1;31m" && cat /usr/local/bin/s1.txt && printf "\033[0m" && cat /usr/local/bin/s2.txt && printf "\033[1;32m" && cat /usr/local/bin/s3.txt && echo
