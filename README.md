@@ -7,5 +7,5 @@ Bash, SH, Dash, Fish, Command Line, CMD
   ```
 + if package is not installed then install it.
   ```bash
-  pkg=git && ! which  > /dev/null && sudo apt install $pkg || echo "$pkg already installed."
+  pkg=git && ! which $pkg > /dev/null && sudo apt install $pkg || echo "$pkg already installed."
   ```
