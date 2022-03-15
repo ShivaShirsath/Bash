@@ -1,0 +1,10 @@
+#!/bin/bash
+
+dir=$1
+
+[ ! -d $dir ] && [ ! -L $dir ] && {
+        mkdir $dir
+        echo $dir Created.
+} || {
+        echo " $dir > `readlink -f $dir` Exist."
+}
