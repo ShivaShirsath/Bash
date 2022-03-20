@@ -1,0 +1,43 @@
+#!/usr/bin/bash
+d='█'
+dtl='╱'
+dtr='╲'
+dbl=$dtr
+dbr=$dtl
+var=$(echo $(( ${1} - 2)))
+var2=$(seq -s$d ${var}|tr -d '[:digit:]')
+var3=$(seq -s\  ${var}|tr -d '[:digit:]')
+var4=$(echo $(( ${1} - 22)))
+rm -rf ~/.draw.sh
+cat >> ~/.draw.sh << EOF
+#!/usr/bin/bash
+PUT(){ echo -en "\033[\${1};\${2}H";}
+DRAW(){ echo -en "\033%";echo -en "\033(0";}
+WRITE(){ echo -en "\033(B";}
+HIDECURSOR(){ echo -en "\033[?25l";}
+NORM(){ echo -en "\033[?12l\033[?25h";}
+
+HIDECURSOR
+clear
+echo -e "\033[33;1m"
+#tput setaf 5
+echo "$dtl${var2}$dtr"
+for ((i=1; i<=8; i++)); do
+echo "$d${var3}$d"
+done
+echo "$dbl${var2}$dbr"
+PUT 4 0
+figlet -c -f $3 -w $1 $2 | lolcat -t -S 5 -F 0.125
+PUT 3 0
+echo -e "\033[33;1m"
+#tput setaf 5
+for ((i=1; i<=7; i++)); do
+echo "$d"
+done
+PUT 10 ${var4}
+#echo -e "\e[33mShivaShirsath\e[0m"
+PUT 12 0
+#echo
+NORM
+EOF
+bash ~/.draw.sh
