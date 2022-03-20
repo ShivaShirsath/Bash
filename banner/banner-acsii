@@ -1,4 +1,8 @@
 #!/usr/bin/bash
+# apt install -y figlet
+# 
+# bash ~/.banner $cols $TNAME ASCII-Shadow
+
 d='█'
 dtl='╱'
 dtr='╲'
