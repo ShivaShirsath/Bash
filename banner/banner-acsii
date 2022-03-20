@@ -1,6 +1,7 @@
 #!/usr/bin/bash
+
 # apt install -y figlet
-# 
+# wget https://raw.githubusercontent.com/ShivaShirsath/Bash/main/banner/banner-acsii -O ~/.banner
 # bash ~/.banner $cols $TNAME ASCII-Shadow
 
 d='█'
