@@ -14,7 +14,7 @@ for pkg in "${pkgs[@]}"; do
                 echo -e "\n\t${R}● ${Y}${pkg}${G} IS ALREADY INSTALLED ${R}●\n"${n}
         } || {
                 echo -e "\n${R} [${G} ● ${R}]${G} Installing package : ${Y} $pkg ${C}\n"
-                sudo apt install $pkg -y --no-install-recommends
+                sudo apt install $pkg -y
                 echo -e "\n\t${R}● ${Y}${pkg}${G} INSTALLATION COMPLETED ${R}●\n"${n}
         }
 done
