@@ -23,5 +23,5 @@ Bash, SH, Dash, Fish, Command Line, CMD
 
 + list all files and surround it with `"` or `",` in dir
   ```bash
-  cd dir && s=`ls -d */` && s=\"$s\", && echo "${s//$'\n'/$'\",\n"'}"
+  cd dir && $ s=`ls -p | grep -v /` && s=\"$s\", && echo "${s//$'\n'/$'\",\n"'}"
   ```
